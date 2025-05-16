@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Flow</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Focus Flow</h1>
+      <div class="toggle-container">
+        <span class="status-indicator" id="statusIndicator">✅ Active</span>
+        <label class="switch">
+          <input type="checkbox" id="toggleExtension">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="favorites">⭐ Favorite Domains</button>
+      <button class="tab-button" data-tab="blacklist">🚫 Blacklisted Domains</button>
+    </div>
+
+    <div class="tab-content" id="favoritesTab">
+      <div class="input-group">
+        <input type="text" id="addFavoriteInput" placeholder="Add domain...">
+        <button id="addFavoriteBtn">Add</button>
+      </div>
+      <div class="sort-controls">
+        <select id="favoriteSort">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+      </div>
+      <ul class="domain-list" id="favoriteList"></ul>
+      <p class="hint">Tip: Right-click any link to quickly add to favorites!</p>
+    </div>
+
+    <div class="tab-content hidden" id="blacklistTab">
+      <div class="input-group">
+        <input type="text" id="addBlacklistInput" placeholder="Add domain...">
+        <button id="addBlacklistBtn">Add</button>
+      </div>
+      <div class="sort-controls">
+        <select id="blacklistSort">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+      </div>
+      <ul class="domain-list" id="blacklistList"></ul>
+      <p class="hint">Tip: Right-click any link to quickly blacklist!</p>
+    </div>
+
+    <footer>
+      <button id="settingsBtn">⚙️ Settings</button>
+      <span class="version">v1.0.0</span>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

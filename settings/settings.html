@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Flow - Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button id="backBtn">← Back</button>
+      <h1>Focus Flow Settings</h1>
+    </header>
+
+    <div class="settings-section">
+      <h2>General</h2>
+      
+      <div class="setting-item">
+        <label for="autoRefresh">Auto-refresh search results after a change</label>
+        <label class="switch">
+          <input type="checkbox" id="autoRefresh">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+      <div class="setting-item">
+        <label for="fontSize">Font size</label>
+        <select id="fontSize">
+          <option value="normal">Normal</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+      
+      <div class="setting-item">
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="high-contrast">High Contrast</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h2>Import/Export</h2>
+      
+      <div class="setting-item">
+        <label>Select list to export/import:</label>
+        <div class="button-group">
+          <button id="exportBlacklistBtn">Export Blacklist</button>
+          <button id="exportFavoritesBtn">Export Favorites</button>
+        </div>
+      </div>
+      
+      <div class="setting-item">
+        <label for="importFile">Import domains from file:</label>
+        <input type="file" id="importFile" accept=".json">
+        <div class="button-group">
+          <button id="importBlacklistBtn">Import to Blacklist</button>
+          <button id="importFavoritesBtn">Import to Favorites</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h2>Help & Feedback</h2>
+      <button id="feedbackBtn">Submit Feedback</button>
+      <button id="tutorialBtn">Show Tutorial</button>
+    </div>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>
